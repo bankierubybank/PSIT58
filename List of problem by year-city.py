@@ -16,14 +16,23 @@ def list_of_problem_city(city):
     """print list of problem by city"""
     import csv
     years = list(range(2551, 2553))
-    temp = [city,0,0,0,0]
+    temp = []
+    sum_of_problem = 0
     for year in years:
         selected_data = 'test_pol_stat' + str(year) + '.csv'
         with open(selected_data) as csvfile:
             data = csv.reader(csvfile)
             for row in data:
                 if row[0] == city:
-                    for i in range(1, len(row)):
-                        temp[i] += int(row[i])
-    sum_of_problem = sum(temp[1:])
-    print(temp, '=', sum_of_problem)
+                    data_per_year = []
+                    for i in row:
+                        if i.isalpha():
+                            data_per_year.append(i)
+                        else:
+                            data_per_year.append(int(i))
+        temp.append(data_per_year)
+    for i in range(len(temp)):
+        sum_of_problem += sum(temp[i][1:])
+        print('Year', str(2551 + i), '=', temp[i])
+    print('Sum of Problem in ' + str(len(years)), 'Years =', sum_of_problem)
+list_of_problem_city('Bangkok')
