@@ -3,18 +3,21 @@ import csv
 import matplotlib.pyplot as plt
 import numpy as np
 
+data_form = ['พื้นที่', 'จำนวนเรื่อง', 'กลิ่นเหม็น', 'เสียงดังรบกวน', 'ฝุ่นควัน', 'น้ำเสีย', \
+             'ขยะมูลฝอย', 'ของเสียอันตราย', 'ความสั่นสะเทือน', 'อื่นๆ']
+
 def sum_of_problem_year(year):
     """Return sum of problem by year"""
-    temp = 0
+    total_problem = 0
     selected_data = 'pol_stat' + str(year) + '.csv'
     with open(selected_data) as csvfile:
         data = csv.reader(csvfile)
         for row in data:
             print(row)
-            for i in range(1, len(row)):
-                temp += int(row[i])
-    print('END OF YEAR', str(year), 'SUM OF PROBLEM =', str(temp))
-    return temp
+            for i in range(2, len(row) - 1):
+                total_problem += int(row[i])
+    print('END OF YEAR', str(year), 'SUM OF PROBLEM =', str(total_problem))
+    return total_problem
 
 def list_of_problem_city(city):
     """Return list of problem by city"""
@@ -29,13 +32,10 @@ def list_of_problem_city(city):
                 if row[0] == city:
                     data_per_year = []
                     for i in row:
-                        if i.isalpha():
-                            data_per_year.append(i)
-                        else:
-                            data_per_year.append(int(i))
-        temp.append(data_per_year)
+                        data_per_year.append(i) if i.isalpha() else data_per_year.append(int(i))
+        temp.append(data_per_year[2:len(data_per_year)-1])
     for i in range(len(temp)):
-        sum_of_problem += sum(temp[i][1:])
+        sum_of_problem += sum(temp[i][2:len(temp[i])-1])
     return temp
 
 def problem_per_year_to_problem_type():
@@ -44,10 +44,10 @@ def problem_per_year_to_problem_type():
     year = 4
     problem = []
     for i in range(year):
-        temp = list_of_problem_city('Bangkok')[i][1:]
+        temp = list_of_problem_city('Bangkok')[i]
         problem.append(temp)
     problem = np.array(problem)
-    array = problem.reshape(year,10)
+    array = problem.reshape(year,8)
     array = array.transpose()
     return array
     
