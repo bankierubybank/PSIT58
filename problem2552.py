@@ -13,11 +13,27 @@ for i in table[1:78]:
     problem_6.append(i[6])
     problem_7.append(i[7])
     problem_8.append(i[8])
-#plot graph for problem 1 of year 2552
+#plot graph for all problem of year 2552
 import matplotlib.pyplot as ptl
-x=[province]
-y=[problem_1]
-ptl.plot(x,y,':go')
-ptl.xlabel("province")
-ptl.ylabel("Problem 1")
-ptl.show()
+x = [province]
+y1 = [problem_1]
+y2 = [problem_2]
+y3 = [problem_3]
+y4 = [problem_4]
+y5 = [problem_5]
+y6 = [problem_6]
+y7 = [problem_7]
+y8 = [problem_8]
+p1=plt.plot(x,y1,'ro-')
+p2=plt.plot(x,y2,'go-')
+p3=plt.plot(x,y3,'bo-')
+p4=plt.plot(x,y4,'yo-')
+p5=plt.plot(x,y5,'r*-')
+p6=plt.plot(x,y6,'g*-')
+p7=plt.plot(x,y7,'b*-')
+p8=plt.plot(x,y8,'y*-')
+plt.legend((p1[0],p2[0],p3[0],p4[0],p5[0],p6[0],p7[0],p8[0]),('problem 1','problem 2','problem 3','problem 4','problem 5','problem 6','problem 7','problem 8'))
+plt.title("Problem of year 2552")
+plt.xlabel("Province")
+plt.ylabel("number of problem")
+plt.show()
