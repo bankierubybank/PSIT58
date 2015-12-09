@@ -37,3 +37,5 @@ plt.title("Problem of year 2552")
 plt.xlabel("Province")
 plt.ylabel("number of problem")
 plt.show()
+
+#Boom TESt
