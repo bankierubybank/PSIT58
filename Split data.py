@@ -93,3 +93,15 @@ line_chart_3.add('ปี 2555', problem_3[4])
 line_chart_3.add('ปี 2556', problem_3[5])
 line_chart_3.add('ปี 2557', problem_3[6])
 line_chart_3.render_to_file('problem_3.svg')
+#Plot graph of problem 4 in year 2551-2557
+line_chart_4 = pygal.Line()
+line_chart_4.title = 'ปัญหามลภาวะทางด้านน้ำเสีย'
+line_chart_4.x_labels = province
+line_chart_4.add('ปี 2551', problem_4[0])
+line_chart_4.add('ปี 2552', problem_4[1])
+line_chart_4.add('ปี 2553', problem_4[2])
+line_chart_4.add('ปี 2554', problem_4[3])
+line_chart_4.add('ปี 2555', problem_4[4])
+line_chart_4.add('ปี 2556', problem_4[5])
+line_chart_4.add('ปี 2557', problem_4[6])
+line_chart_4.render_to_file('problem_4.svg')
