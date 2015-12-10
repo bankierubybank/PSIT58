@@ -129,3 +129,27 @@ line_chart_6.add('ปี 2555', problem_6[4])
 line_chart_6.add('ปี 2556', problem_6[5])
 line_chart_6.add('ปี 2557', problem_6[6])
 line_chart_6.render_to_file('problem_6.svg')
+#Plot graph of problem 7 in year 2551-2557
+line_chart_7 = pygal.Line()
+line_chart_7.title = 'ปัญหามลภาวะทางด้านความสั่นสะเทือน'
+line_chart_7.x_labels = province
+line_chart_7.add('ปี 2551', problem_7[0])
+line_chart_7.add('ปี 2552', problem_7[1])
+line_chart_7.add('ปี 2553', problem_7[2])
+line_chart_7.add('ปี 2554', problem_7[3])
+line_chart_7.add('ปี 2555', problem_7[4])
+line_chart_7.add('ปี 2556', problem_7[5])
+line_chart_7.add('ปี 2557', problem_7[6])
+line_chart_7.render_to_file('problem_7.svg')
+#Plot graph of problem 8 in year 2551-2557
+line_chart_8 = pygal.Line()
+line_chart_8.title = 'ปัญหามลภาวะด้านอื่นๆ'
+line_chart_8.x_labels = province
+line_chart_8.add('ปี 2551', problem_8[0])
+line_chart_8.add('ปี 2552', problem_8[1])
+line_chart_8.add('ปี 2553', problem_8[2])
+line_chart_8.add('ปี 2554', problem_8[3])
+line_chart_8.add('ปี 2555', problem_8[4])
+line_chart_8.add('ปี 2556', problem_8[5])
+line_chart_8.add('ปี 2557', problem_8[6])
+line_chart_8.render_to_file('problem_8.svg')
