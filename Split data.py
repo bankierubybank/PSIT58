@@ -81,3 +81,15 @@ line_chart_2.add('ปี 2555', problem_2[4])
 line_chart_2.add('ปี 2556', problem_2[5])
 line_chart_2.add('ปี 2557', problem_2[6])
 line_chart_2.render_to_file('problem_2.svg')
+#Plot graph of problem 3 in year 2551-2557
+line_chart_3 = pygal.Line()
+line_chart_3.title = 'ปัญหามลภาวะทางฝุ่นละออง/เขม่าควัน'
+line_chart_3.x_labels = province
+line_chart_3.add('ปี 2551', problem_3[0])
+line_chart_3.add('ปี 2552', problem_3[1])
+line_chart_3.add('ปี 2553', problem_3[2])
+line_chart_3.add('ปี 2554', problem_3[3])
+line_chart_3.add('ปี 2555', problem_3[4])
+line_chart_3.add('ปี 2556', problem_3[5])
+line_chart_3.add('ปี 2557', problem_3[6])
+line_chart_3.render_to_file('problem_3.svg')
