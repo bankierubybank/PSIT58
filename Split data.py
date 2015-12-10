@@ -53,3 +53,19 @@ for i in range(9): #i is number of problem.
                 problem_7[j].append(int(table[j][k][i]))
             if i == 8:
                 problem_8[j].append(int(table[j][k][i]))
+#Plot graph of problem 1 in year 2551-2557
+import pygal
+import os
+import uuid
+from pygal import*
+line_chart = pygal.Line()
+line_chart.title = 'ปัญหามลภาวะทางกลิ่น'
+line_chart.x_labels = province
+line_chart.add('ปี 2551', problem_1[0])
+line_chart.add('ปี 2552', problem_1[1])
+line_chart.add('ปี 2553', problem_1[2])
+line_chart.add('ปี 2554', problem_1[3])
+line_chart.add('ปี 2555', problem_1[4])
+line_chart.add('ปี 2556', problem_1[5])
+line_chart.add('ปี 2557', problem_1[6])
+line_chart.render_to_file('problem_1.svg')
