@@ -58,14 +58,26 @@ import pygal
 import os
 import uuid
 from pygal import*
-line_chart = pygal.Line()
-line_chart.title = 'ปัญหามลภาวะทางกลิ่น'
-line_chart.x_labels = province
-line_chart.add('ปี 2551', problem_1[0])
-line_chart.add('ปี 2552', problem_1[1])
-line_chart.add('ปี 2553', problem_1[2])
-line_chart.add('ปี 2554', problem_1[3])
-line_chart.add('ปี 2555', problem_1[4])
-line_chart.add('ปี 2556', problem_1[5])
-line_chart.add('ปี 2557', problem_1[6])
-line_chart.render_to_file('problem_1.svg')
+line_chart_1 = pygal.Line()
+line_chart_1.title = 'ปัญหามลภาวะทางกลิ่น'
+line_chart_1.x_labels = province
+line_chart_1.add('ปี 2551', problem_1[0])
+line_chart_1.add('ปี 2552', problem_1[1])
+line_chart_1.add('ปี 2553', problem_1[2])
+line_chart_1.add('ปี 2554', problem_1[3])
+line_chart_1.add('ปี 2555', problem_1[4])
+line_chart_1.add('ปี 2556', problem_1[5])
+line_chart_1.add('ปี 2557', problem_1[6])
+line_chart_1.render_to_file('problem_1.svg')
+#Plot graph of problem 2 in year 2551-2557
+line_chart_2 = pygal.Line()
+line_chart_2.title = 'ปัญหามลภาวะทางเสียง (เสียงดัง/เสียรบกวน)'
+line_chart_2.x_labels = province
+line_chart_2.add('ปี 2551', problem_2[0])
+line_chart_2.add('ปี 2552', problem_2[1])
+line_chart_2.add('ปี 2553', problem_2[2])
+line_chart_2.add('ปี 2554', problem_2[3])
+line_chart_2.add('ปี 2555', problem_2[4])
+line_chart_2.add('ปี 2556', problem_2[5])
+line_chart_2.add('ปี 2557', problem_2[6])
+line_chart_2.render_to_file('problem_2.svg')
