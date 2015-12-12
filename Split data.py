@@ -153,3 +153,27 @@ line_chart_8.add('ปี 2555', problem_8[4])
 line_chart_8.add('ปี 2556', problem_8[5])
 line_chart_8.add('ปี 2557', problem_8[6])
 line_chart_8.render_to_file('problem_8.svg')
+
+#Split number from data to plot graph
+sum_prob = []
+for l in range(7):
+    sum_prob.append(table[l][-1][1:])
+prob_of_year = []
+for m in range(8):
+    prob_year = []
+    for n in range(7):
+        prob_year.append(int(sum_prob[n][m]))
+    prob_of_year.append(prob_year)
+#Plot graph for compare number of all problem each year (2551-2557)
+line_chart = pygal.Bar()
+line_chart.title = 'จำนวนการร้องเรียนปัญหาแต่ละประเภทของปี 2551-2557'
+line_chart.x_labels = map(str, range(2551, 2558))
+line_chart.add('กลิ่นเหม็น', [int(x) for x in prob_of_year[0]])
+line_chart.add('เสียงดัง/เสียงรบกวน', [int(x) for x in prob_of_year[1]])
+line_chart.add('ฝุ่นละออง/เขม่าควัน', [int(x) for x in prob_of_year[2]])
+line_chart.add('น้ำเสีย', [int(x) for x in prob_of_year[3]])
+line_chart.add('ขยะมูลฝอยและสิ่งปฏิกูล', [int(x) for x in prob_of_year[4]])
+line_chart.add('ของเสียอันตราย', [int(x) for x in prob_of_year[5]])
+line_chart.add('ความสั่นสะเทือน', [int(x) for x in prob_of_year[6]])
+line_chart.add('อื่นๆ', [int(x) for x in prob_of_year[7]])
+line_chart.render_data_uri()
