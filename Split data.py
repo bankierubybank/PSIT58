@@ -68,7 +68,7 @@ line_chart_1.add('ปี 2554', problem_1[3])
 line_chart_1.add('ปี 2555', problem_1[4])
 line_chart_1.add('ปี 2556', problem_1[5])
 line_chart_1.add('ปี 2557', problem_1[6])
-line_chart_1.render_to_file('problem_1.svg')
+line_chart_1.render_data_uri()
 #Plot graph of problem 2 in year 2551-2557
 line_chart_2 = pygal.Line()
 line_chart_2.title = 'ปัญหามลภาวะทางเสียง (เสียงดัง/เสียรบกวน)'
@@ -80,7 +80,7 @@ line_chart_2.add('ปี 2554', problem_2[3])
 line_chart_2.add('ปี 2555', problem_2[4])
 line_chart_2.add('ปี 2556', problem_2[5])
 line_chart_2.add('ปี 2557', problem_2[6])
-line_chart_2.render_to_file('problem_2.svg')
+line_chart_2.render_data_uri()
 #Plot graph of problem 3 in year 2551-2557
 line_chart_3 = pygal.Line()
 line_chart_3.title = 'ปัญหามลภาวะทางฝุ่นละออง/เขม่าควัน'
@@ -92,7 +92,7 @@ line_chart_3.add('ปี 2554', problem_3[3])
 line_chart_3.add('ปี 2555', problem_3[4])
 line_chart_3.add('ปี 2556', problem_3[5])
 line_chart_3.add('ปี 2557', problem_3[6])
-line_chart_3.render_to_file('problem_3.svg')
+line_chart_3.render_data_uri()
 #Plot graph of problem 4 in year 2551-2557
 line_chart_4 = pygal.Line()
 line_chart_4.title = 'ปัญหามลภาวะทางด้านน้ำเสีย'
@@ -104,7 +104,7 @@ line_chart_4.add('ปี 2554', problem_4[3])
 line_chart_4.add('ปี 2555', problem_4[4])
 line_chart_4.add('ปี 2556', problem_4[5])
 line_chart_4.add('ปี 2557', problem_4[6])
-line_chart_4.render_to_file('problem_4.svg')
+line_chart_4.render_data_uri()
 #Plot graph of problem 5 in year 2551-2557
 line_chart_5 = pygal.Line()
 line_chart_5.title = 'ปัญหามลภาวะทางด้านขยะมูลฝอยและสิ่งปฏิกูล'
@@ -116,7 +116,7 @@ line_chart_5.add('ปี 2554', problem_5[3])
 line_chart_5.add('ปี 2555', problem_5[4])
 line_chart_5.add('ปี 2556', problem_5[5])
 line_chart_5.add('ปี 2557', problem_5[6])
-line_chart_5.render_to_file('problem_5.svg')
+line_chart_5.render_data_uri()
 #Plot graph of problem 6 in year 2551-2557
 line_chart_6 = pygal.Line()
 line_chart_6.title = 'ปัญหามลภาวะทางด้านของเสียอันตราย'
@@ -128,7 +128,7 @@ line_chart_6.add('ปี 2554', problem_6[3])
 line_chart_6.add('ปี 2555', problem_6[4])
 line_chart_6.add('ปี 2556', problem_6[5])
 line_chart_6.add('ปี 2557', problem_6[6])
-line_chart_6.render_to_file('problem_6.svg')
+line_chart_6.render_data_uri()
 #Plot graph of problem 7 in year 2551-2557
 line_chart_7 = pygal.Line()
 line_chart_7.title = 'ปัญหามลภาวะทางด้านความสั่นสะเทือน'
@@ -140,7 +140,7 @@ line_chart_7.add('ปี 2554', problem_7[3])
 line_chart_7.add('ปี 2555', problem_7[4])
 line_chart_7.add('ปี 2556', problem_7[5])
 line_chart_7.add('ปี 2557', problem_7[6])
-line_chart_7.render_to_file('problem_7.svg')
+line_chart_7.render_data_uri()
 #Plot graph of problem 8 in year 2551-2557
 line_chart_8 = pygal.Line()
 line_chart_8.title = 'ปัญหามลภาวะด้านอื่นๆ'
@@ -152,7 +152,7 @@ line_chart_8.add('ปี 2554', problem_8[3])
 line_chart_8.add('ปี 2555', problem_8[4])
 line_chart_8.add('ปี 2556', problem_8[5])
 line_chart_8.add('ปี 2557', problem_8[6])
-line_chart_8.render_to_file('problem_8.svg')
+line_chart_8.render_data_uri()
 
 #Split number from data to plot graph
 sum_prob = []
