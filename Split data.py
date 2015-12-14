@@ -71,7 +71,7 @@ line_chart_1.add('ปี 2557', problem_1[6])
 line_chart_1.render_data_uri()
 #Plot graph of problem 2 in year 2551-2557
 line_chart_2 = pygal.Line()
-line_chart_2.title = 'ปัญหามลภาวะทางเสียง (เสียงดัง/เสียรบกวน)'
+line_chart_2.title = 'ปัญหามลภาวะทางเสียง (เสียงดัง/เสียงรบกวน)'
 line_chart_2.x_labels = province
 line_chart_2.add('ปี 2551', problem_2[0])
 line_chart_2.add('ปี 2552', problem_2[1])
